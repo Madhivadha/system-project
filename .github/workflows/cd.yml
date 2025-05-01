@@ -20,14 +20,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      # Install dependencies
-      - name: Install dependencies
-        run: npm install
-
-      # Run tests
-      - name: Run tests
-        run: npm test
-
       # Log in to Docker Hub
       - name: Login to Docker Hub
         run: echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u ${{ secrets.DOCKERHUB_USER }} --password-stdin

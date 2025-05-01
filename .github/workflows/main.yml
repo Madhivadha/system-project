@@ -2,7 +2,7 @@ name: Security Scanning
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *'  
   push:
     branches: [ "main" ]
   pull_request:
@@ -41,4 +41,3 @@ jobs:
 
       - name: Run npm audit
         run: npm audit --audit-level=high
-
